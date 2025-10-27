@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY PORFOLIO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER  -->
+  <header class="header">
+    <div class="logo">WELCOME <span></span></div>
+    <nav class="navbar">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills" class="nav-link" data-target="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-target="projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!--  HERO SECTION  -->
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Divya</span></h1>
+      <p>Creative web developer and digital marketing enthusiast passionate about designing modern, 
+      <p>elegant interfaces and impactful content.</p></p>
+      <a href="#about" class="btn">Know More</a>
+    </div>
+    <div class="hero-img">
+      <img src="image3.jpg" alt="Profile" />
+    </div>
+  </section>
+
+  <!--  ABOUT SECTION  -->
+  <section id="about" class="about-section">
+    <div class="about-image">
+      <div class="profile-glass">
+        <img src="myprofile.jpg" alt="Diva" />
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+         A passionate fresher stepping into the world of web development and digital marketing. 
+        I love creating designs that reflect personality and purpose. My goal is to combine creativity with technology to build meaningful, user-friendly digital experiences.
+      </p>
+    </div>
+  </section>
+
+ <!--  SKILLS SECTION  -->
+<section id="skills" class="skills section-content">
+  <h2>Skills</h2>
+  <div class="skill-container">
+    <div class="skill-card">
+      <img src="html.png" alt="HTML" class="skill-icon">
+    </div>
+    <div class="skill-card">
+      <img src="css.png" alt="CSS" class="skill-icon">
+    </div>
+    <div class="skill-card">
+      <img src="js.png" alt="JavaScript" class="skill-icon">
+    </div>
+    <div class="skill-card">
+      <img src="python.png" alt="Python" class="skill-icon">
+    </div>
+    <div class="skill-card">
+      <img src="cloud.png" alt="Cloud Computing" class="skill-icon">
+    </div>
+    <div class="skill-card">
+      <img src="webdev.png" alt="Web Development" class="skill-icon">
+    </div>
+  </div>
+</section>
+
+  <!-- PROJECTS SECTION  -->
+  <section id="projects" class="projects section-content">
+    <h2>Projects</h2>
+    <div class="project-container">
+      
+      <div class="project-card highlight">
+        <h3>📚 Book Store Management System</h3>
+        <p>A C++ mini-project that helps manage book details efficiently, showcasing structured data handling.</p>
+      </div>
+
+      <div class="project-card highlight">
+        <h3>🧑‍🎓 Student Result Management System</h3>
+        <p>A DBMS project that stores, updates, and manages student marks securely with SQL database connectivity.</p>
+      </div>
+
+      <div class="project-card highlight">
+        <h3>🔐 Secure Password Manager</h3>
+        <p>A client-side web app to store and manage passwords safely using HTML, CSS, and JavaScript encryption.</p>
+      </div>
+
+      <div class="project-card highlight">
+        <h3>🗳️ Secure Classroom Voting System</h3>
+        <p>Cybersecurity-focused project ensuring transparent and secure online voting (Frontend simulation).</p>
+      </div>
+
+      <div class="project-card highlight">
+        <h3>🚀 Airshow Simulation (OpenGL)</h3>
+        <p>An OpenGL project that simulates a realistic airshow scene using C++ with aircraft movement and lighting effects.</p>
+      </div>
+
+      <div class="project-card highlight">
+        <h3>🤖 UiPath Automation – Amazon Login</h3>
+        <p>Automation project using UiPath and Windows Credential Manager to log in securely to Amazon.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION  -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect and collaborate!</p>
+    <a href="mailto:yourmail@gmail.com" class="btn">Email Me</a>
+  </section>
+
+  <!-- FOOTER  -->
+  <footer class="footer">
+    <p>© 2025 Diva's Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <!--  SCRIPT  -->
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section-content');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+        sections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === targetId) {
+            section.classList.add('active');
+          }
+        });
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
